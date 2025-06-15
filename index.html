@@ -4,6 +4,24 @@
   <meta charset="UTF-8">
   <title>Untuk Kamu</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    const startDate = new Date('2024-12-01T00:00:00');
+
+    function updateDuration() {
+      const now = new Date();
+      const diff = now - startDate;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("ldr-duration").innerText =
+        `${days} hari, ${hours} jam, ${minutes} menit, ${seconds} detik`;
+    }
+
+    setInterval(updateDuration, 1000);
+    window.onload = updateDuration;
+  </script>
 </head>
 <body>
   <div class="hearts">
@@ -18,6 +36,12 @@
     <h1>Hai Adek 🤍</h1>
     <img src="Gambar WhatsApp 2025-06-09 pukul 13.52.21_5ca5dd5b.jpg" alt="Foto Kita">
     <p class="message">"Aku tidak tahu harus menuliskan pesan apa disini, intinya jangan kecewain aku ya dek. Love you more, best wishes for us"</p>
+
+    <p id="ldr-duration" style="margin-top: 30px; font-weight: bold;"></p>
   </div>
+
+  <marquee behavior="scroll" direction="left" scrollamount="4" class="marquee" style="margin-top: 40px; font-style: italic; font-size: 1.1em;">
+    “Jarak hanyalah ujian seberapa jauh cinta bisa bertahan.” • “Aku percaya, kita bisa melalui semua ini bersama.” • “Rindu ini semoga segera berakhir dengan pertemuan.”
+  </marquee>
 </body>
 </html>
