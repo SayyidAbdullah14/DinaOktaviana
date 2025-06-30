@@ -77,7 +77,15 @@ html {
 }
 
 section .gambar {
-  border-radius: 10px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+  /* Tidak memaksakan ukuran */
+  width: auto;
+  height: auto;
+  max-width: 100%;
 }
 
 section .ucapan {
